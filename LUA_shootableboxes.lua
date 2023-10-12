@@ -1,37 +1,34 @@
--- Shootable Boxes v1.0 (c) 2023 Zibon "PixL" Badi
+-- Shootable Boxes v1.0.1 (c) 2023 Zibon "PixL" Badi
 -- This add-on is licensed under the GNU Affero GPLv3
 -- <https://www.gnu.org/licenses/agpl-3.0.en.html>
 
 -- Blurt out legal stuff
-CONS_Printf(players[0], "\x83===================================================\n" ..
-"Shootable Boxes v1.0 (c) 2023 Zibon \"PixL\" Badi\n" ..
+print( "\x83===================================================\n" ..
+"Shootable Boxes v1.0.1 (c) 2023 Zibon \"PixL\" Badi\n" ..
 "This add-on is licensed under the GNU Affero GPLv3\n" ..
 "<https://www.gnu.org/licenses/agpl-3.0.en.html>\n" ..
 "===================================================\n" ..
-"\x84\nType \x82sbhelp\x84 to get started.\x80"
+"\x84\nType \x82sb_help\x84 to get started.\x80"
 )
 
 local function sbhelp(player, command)
-	if command == nil or command == "help" then
-		local sb_val = CV_FindVar("sb_enable")
-		CONS_Printf(player, "\n\82" ..
-		"\x83===================================================\n" ..
-		"Shootable Boxes v1.0 (c) 2023 Zibon \"PixL\" Badi\n" ..
-		"This add-on is licensed under the GNU Affero GPLv3\n" ..
-		"<https://www.gnu.org/licenses/agpl-3.0.en.html>\n" ..
-		"===================================================\n" ..
-		"\n" ..
-		"\x8AVariables guide\n" ..
-		"---------------\n\n" ..
-		"\t\x82sb_help\x80\tPrint this help text.\n" ..
-		"\t\x82sb_* (without suffix)\x80\tToggle weapons.\n" ..
-		"\t\x82sb_*box_gold\x80\tToggle boxes by type.\n" ..
-		"\t\x82sb_crossteam\x80\tShoot enemy boxes (CTF).\n" ..
-		"\n" ..
-		"Shootable Boxes (\x82cb_enable\x85) is \x85"+sb_val.string+"\x80.\n"
-		)
-	-- elseif command = then
-	end
+	local sb_val = CV_FindVar("sb_enable")
+	CONS_Printf(player, "\n\82" ..
+	"\x83===================================================\n" ..
+	"Shootable Boxes v1.0.1 (c) 2023 Zibon \"PixL\" Badi\n" ..
+	"This add-on is licensed under the GNU Affero GPLv3\n" ..
+	"<https://www.gnu.org/licenses/agpl-3.0.en.html>\n" ..
+	"===================================================\n" ..
+	"\n" ..
+	"\x8AVariables guide\n" ..
+	"---------------\n\n" ..
+	"\t\x82sb_help\x80\tPrint this help text.\n" ..
+	"\t\x82sb_* (without suffix)\x80\tToggle weapons.\n" ..
+	"\t\x82sb_*box_gold\x80\tToggle boxes by type.\n" ..
+	"\t\x82sb_crossteam\x80\tShoot enemy boxes (CTF).\n" ..
+	"\n" ..
+	"Shootable Boxes (\x82cb_enable\x85) is \x85"+sb_val.string+"\x80.\n"
+	)
 end
 
 
